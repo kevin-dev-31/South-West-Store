@@ -1,0 +1,106 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Symfony\\Component\\ExpressionLanguage\\ParsedExpression'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\ParsedExpression')),
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\BinaryNode'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\BinaryNode')),
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\BinaryNode'],
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\ConstantNode'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\ConstantNode')),
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\NameNode'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\NameNode')),
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\BinaryNode'],
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\UnaryNode'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\UnaryNode')),
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\FunctionNode'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\FunctionNode')),
+        clone ($p['Symfony\\Component\\ExpressionLanguage\\Node\\Node'] ?? Registry::p('Symfony\\Component\\ExpressionLanguage\\Node\\Node')),
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\BinaryNode'],
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\UnaryNode'],
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\ConstantNode'],
+        clone $p['Symfony\\Component\\ExpressionLanguage\\Node\\NameNode'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\ExpressionLanguage\\ParsedExpression' => [
+            'nodes' => [
+                $o[1],
+            ],
+        ],
+        'Symfony\\Component\\ExpressionLanguage\\Expression' => [
+            'expression' => [
+                '"ROLE_ADMIN" in roles or (not is_anonymous() and not "ROLE_USER" in roles)',
+            ],
+        ],
+        'stdClass' => [
+            'nodes' => [
+                1 => [
+                    'left' => $o[2],
+                    'right' => $o[5],
+                ],
+                [
+                    'left' => $o[3],
+                    'right' => $o[4],
+                ],
+                5 => [
+                    'left' => $o[6],
+                    'right' => $o[9],
+                ],
+                [
+                    'node' => $o[7],
+                ],
+                [
+                    'arguments' => $o[8],
+                ],
+                9 => [
+                    'left' => $o[10],
+                    'right' => $o[12],
+                ],
+                [
+                    'node' => $o[11],
+                ],
+            ],
+            'attributes' => [
+                1 => [
+                    'operator' => 'or',
+                ],
+                [
+                    'operator' => 'in',
+                ],
+                [
+                    'value' => 'ROLE_ADMIN',
+                ],
+                [
+                    'name' => 'roles',
+                ],
+                [
+                    'operator' => 'and',
+                ],
+                [
+                    'operator' => 'not',
+                ],
+                [
+                    'name' => 'is_anonymous',
+                ],
+                9 => [
+                    'operator' => 'in',
+                ],
+                [
+                    'operator' => 'not',
+                ],
+                [
+                    'value' => 'ROLE_USER',
+                ],
+                [
+                    'name' => 'roles',
+                ],
+            ],
+        ],
+        'Symfony\\Component\\ExpressionLanguage\\Node\\ConstantNode' => [
+            'isIdentifier' => [
+                3 => false,
+                11 => false,
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);
